@@ -1,0 +1,11 @@
+.cart-thumbnail img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.cart-flipkart-assured img {
+  width: 80px;
+}
+.cart-item-title:hover{
+    color: rgb(7, 104, 248);
+}

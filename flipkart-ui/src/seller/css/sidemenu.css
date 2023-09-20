@@ -1,0 +1,7 @@
+.list-item{
+    list-style: none;
+    text-decoration: none;
+}
+.list-item li:hover{
+background-color: rgb(224, 224, 224);
+}

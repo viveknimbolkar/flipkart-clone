@@ -1,0 +1,9 @@
+
+.common-product-card-container .common-product-card {
+    width: 500px;
+}
+
+.common-product-card-container  img{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,14 @@
+.simple-product-card-container img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.simple-product-card-container button{
+    border: none;
+    height: 40px;
+}
+.simple-product-card-container{
+    width: 400px;
+    height: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

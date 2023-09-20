@@ -1,0 +1,16 @@
+.product-details:hover {
+  color: rgb(0, 47, 255);
+}
+.product-details {
+  line-height: 15px;
+  max-height: 60px;
+  overflow: hidden;
+}
+.assured-image img{
+  width: 60px;
+  height: 20px;
+}
+
+.product-boxshadow:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

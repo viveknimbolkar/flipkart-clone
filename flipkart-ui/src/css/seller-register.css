@@ -1,0 +1,34 @@
+.seller-input {
+  border: 1px solid rgb(3, 3, 3);
+  border-color: rgb(216, 216, 216);
+  outline-color: rgb(49, 131, 255);
+}
+.seller-label {
+  font-size: 14px;
+}
+.sell-category-active {
+  color: rgb(0, 102, 204);
+  background-color: rgba(0, 102, 204, 0.1);
+  border: 1px solid rgb(36, 193, 255);
+}
+.sell-category{
+    border: 1px solid rgb(193, 199, 208);
+}
+.sell-on-flipkart-container{
+  background-color: rgb(235, 243, 251);
+  padding: 50px 0;
+}
+.sell-on-flipkart-container__heading{
+  margin-bottom: 80px;
+}
+.login-link{
+  cursor: pointer;
+
+}
+.login-input{
+  font-size: 14px;
+  width: 80%;
+}
+.login-next-btn{
+  border: none;
+}
