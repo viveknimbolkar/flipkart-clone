@@ -10,9 +10,9 @@ function FeatureBrand({ images }) {
       </div>
       <div className="d-flex">
         <div className="flipkart-feature-brand-container d-flex">
-          {images.map((item) => {
+          {images.map((item, i) => {
             return (
-              <Link>
+              <Link key={`featured-${i}`} to="/product">
                 <img src={item} />
               </Link>
             );

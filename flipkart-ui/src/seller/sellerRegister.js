@@ -4,7 +4,7 @@ import SellerProfile from "../assets/seller-profile.svg";
 import Onboarding from "../assets/onboarding-logo-growthImg.svg";
 import Truck from "../assets/onboarding-logo-truck.svg";
 import Percent from "../assets/onboarding-logo-percent.svg";
-import Account from "../assets/onboarding-logo-account.svg";
+import {ReactComponent as AccountLogo} from "../assets/onboarding-logo-account.svg";
 import Payment from "../assets/onboarding-logo-payments.svg";
 import Charges from "../assets/onboarding-logo-charges.svg";
 import Mobile from "../assets/onboarding-logo-mobile.svg";
@@ -249,7 +249,8 @@ function SellerRegister() {
         </div>
         <div className="col-md-3 ">
           <div>
-            <img src={Account} className="my-2" />
+            {/* <img src={Account} className="my-2" /> */}
+            <AccountLogo/>
             <h5>Account Management</h5>
             <p>Our Dedicated managers will help your business on Flipkart</p>
           </div>

@@ -11,7 +11,7 @@ const reviewRoutes = require("./src/routes/reviews");
 const db = require("./src/database/database");
 const swaggerUi = require("swagger-ui-express");
 const { swaggerDocs } = require("./src/lib/swagger");
-console.log(swaggerDocs);
+
 // Middlewares
 app.use(cors());
 app.use(cookieParser());

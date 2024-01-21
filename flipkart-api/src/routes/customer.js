@@ -36,7 +36,7 @@ const verifyUser = (req, res, next) => {
  *           type: string
  *         required: true
  *       - in: query
- *         name:alternate_mobile
+ *         name: alternate_mobile
  *         schema:
  *           type: string
  *         required: true

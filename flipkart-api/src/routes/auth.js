@@ -43,15 +43,14 @@ router.get("/", async (req, res) => {
  *         description: Error
  */
 router.post("/customer/login", async (req, res) => {
-  Customer.find({ email: req.body.email })
-    .exec()
-    .then((customer) => {
-      if (customer.length < 1) {
-        return res.status(401).json({
+  try {
+    const customer = await Customer.find({ email: req.body.email }).exec();
+    if (customer) {
+      if (customer.length === 0) {
+        res.status(401).json({
           message: "Invalid email or password!",
         });
       }
-
       // compare normal string
       if (req.body.password === customer[0].password) {
         const payload = {
@@ -60,9 +59,13 @@ router.post("/customer/login", async (req, res) => {
         };
         const token = jwt.sign(payload, process.env.JWT_SECRET);
 
-        return res.status(200).json({
+        res.status(200).json({
           message: "login successful",
           token: token,
+        });
+      } else {
+        res.status(401).json({
+          message: "Invalid email or password!",
         });
       }
       // store passwords with encryption
@@ -86,14 +89,13 @@ router.post("/customer/login", async (req, res) => {
       //     });
       //   }
       // });
-    })
-    .catch((error) => {
-      console.log(error);
-      res.status(500).json({
-        message: "server unreachable",
-      });
-      res.end();
+    }
+  } catch {
+    console.log(error);
+    res.status(500).json({
+      message: "server unreachable",
     });
+  }
 });
 
 /**
@@ -172,7 +174,6 @@ router.post("/seller/login", async (req, res) => {
     });
 });
 
-
 /**
  * @swagger
  * /seller/register:
@@ -224,7 +225,6 @@ router.post("/seller/register", async (req, res) => {
   });
   res.end();
 });
-
 
 /**
  * @swagger
